@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:jmf="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context="com.jmf.addsubutilstest.MainActivity">
+
+    <com.jmf.addsubutils.AddSubUtils
+        android:id="@+id/add_sub_0"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp" />
+
+    <com.jmf.addsubutils.AddSubUtils
+        android:id="@+id/add_sub_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        jmf:editable="true"
+        jmf:all_background="@color/material_light_green_200"
+        jmf:contentBackground="@color/material_amber_200"
+        jmf:ImageWidth="40dp"
+        jmf:leftResources="@drawable/ic_left"
+        jmf:rightResources="@drawable/ic_right"/>
+
+    <com.jmf.addsubutils.AddSubUtils
+        android:id="@+id/add_sub_2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        jmf:editable="true"
+        jmf:ImageWidth="60dp"
+        jmf:contentTextColor="@color/colorText"
+        jmf:contentWidth="120dp"
+        jmf:contentTextSize="16sp"
+        jmf:contentBackground="@color/material_teal_200"
+        jmf:leftBackground="@drawable/left_selector"
+        jmf:rightBackground="@drawable/right_selector"
+        jmf:leftResources="@drawable/minus"
+        jmf:rightResources="@drawable/plus"/>
+
+
+</LinearLayout>

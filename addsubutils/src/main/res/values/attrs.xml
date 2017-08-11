@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="AddSubUtils">
+        <!--是否可以手动输入-->
+        <attr name="editable" format="boolean"></attr>
+        <!--输入框的位置-->
+        <attr name="location" format="string"></attr>
+        <!-- 左右2边+-按钮的宽度 -->
+        <attr name="ImageWidth" format="dimension" />
+        <!-- 中间EditText的宽度 -->
+        <attr name="contentWidth" format="dimension" />
+        <!--中间TextView的大小-->
+        <attr name="contentTextSize" format="dimension"/>
+        <!--中间字体的颜色-->
+        <attr name="contentTextColor" format="color"/>
+        <!--整个控件的background-->
+        <attr name="all_background" format="color|reference"/>
+        <!--左面控件的背景-->
+        <attr name="leftBackground" format="color|reference"/>
+        <!--右面控件的背景-->
+        <attr name="rightBackground" format="color|reference"/>
+        <!--中间控件的背景-->
+        <attr name="contentBackground" format="color|reference"/>
+        <!--左面控件的资源-->
+        <attr name="leftResources" format="color|reference"/>
+        <!--右面控件的资源-->
+        <attr name="rightResources" format="color|reference"/>
+    </declare-styleable>
+</resources>

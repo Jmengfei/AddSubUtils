@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="addsubutils_btn_width" >30dp</dimen>
+    <dimen name="addsubutils_btn_padding">10dp</dimen>
+    <dimen name="addsubutils_textsize" >15sp</dimen>
+    <dimen name="addsubutils_et_minwidth" >65dp</dimen>
+</resources>

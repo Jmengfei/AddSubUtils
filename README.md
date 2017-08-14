@@ -17,7 +17,7 @@ dependencies {
  compile 'com.mengfei:AddSubUtils:1.0.0'
 }
 ```
-或者下载源码包，链接：https://github.com/Jmengfei/AddSubUtils，并且在build.gradle中添加：
+或者下载源码包，链接：https://github.com/Jmengfei/AddSubUtils ，并且在build.gradle中添加：
 ```
 dependencies {
  compile project(':addsubutils')
@@ -108,3 +108,4 @@ csdn主页：http://blog.csdn.net/sinat_36668731?viewmode=list
 掘金主页：https://juejin.im/user/582991ff570c3500587d2da9
 
 简书主页：http://www.jianshu.com/u/0e9fd9fee3a6
+

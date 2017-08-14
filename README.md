@@ -21,10 +21,9 @@ dependencies {
     <com.mengfei.AddSubUtils
         android:id="@+id/add_sub"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp" />
+        android:layout_height="wrap_content" />
 ```
-### 2.在Activity或者Fragment中配置Banner
+### 2.在Activity或者Fragment中配置AddSubUtils
 
 ```
  AddSubUtils addSubUtils = (AddSubUtils) findViewById(R.id.add_sub);
@@ -51,7 +50,7 @@ dependencies {
                 });
 ```
 
-# Attributes属性（banner布局文件中调用）
+# Attributes属性（addsubutils布局文件中调用）
 
 | Attributes 	|forma	|describe|
 | ----------- |-------|------- |

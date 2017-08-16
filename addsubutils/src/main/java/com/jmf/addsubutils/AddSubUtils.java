@@ -30,12 +30,15 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
     private int inventory = Integer.MAX_VALUE; //商品库存，默认最大值
     private int mBuyMin = 1;// 商品最小购买数量，默认值为1
     private int mStep = 1; // 步长--每次增加的个数，默认是1
+    private int mPosition = 0; // 设置改变的位置，默认是0; //集合数据中会用到
 
     private OnWarnListener mOnWarnListener;
+    private OnChangeValueListener mOnChangeValueListener;
 
     private EditText etInput;
     private ImageView icPlus;
     private ImageView icMinus;
+
 
     public AddSubUtils(Context context) {
         this(context, null);
@@ -129,7 +132,7 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
             if (contentBackground != null) {
                 etInput.setBackground(contentBackground);
             }
-            
+
             if(leftBackground != null) {
                 icMinus.setBackground(leftBackground);
             }
@@ -229,7 +232,11 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
         int count = getNumber();
         if (count < mBuyMin) {
             //手动输入
-            etInput.setText(mBuyMin + "");
+            inputValue = mBuyMin;
+            etInput.setText(inputValue + "");
+            if(mOnChangeValueListener != null) {
+                mOnChangeValueListener.onChangeValue(inputValue,mPosition);
+            }
             return;
         }
         int limit = Math.min(mBuyMax, inventory);
@@ -243,6 +250,9 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
             }
         }else{
            inputValue = count;
+            if(mOnChangeValueListener != null) {
+                mOnChangeValueListener.onChangeValue(inputValue,mPosition);
+            }
         }
     }
 
@@ -265,6 +275,11 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
         return this;
     }
 
+    public AddSubUtils setBean(Object bean) {
+        this.inventory = inventory;
+        return this;
+    }
+
     public int getBuyMax() {
         return mBuyMax;
     }
@@ -273,6 +288,14 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
         mBuyMax = buyMax;
         return this;
     }
+    public AddSubUtils setPosition(int position) {
+        mPosition = position;
+        return this;
+    }
+    public int getPosition() {
+        return mPosition;
+    }
+
     public AddSubUtils setBuyMin(int buyMin) {
         mBuyMin = buyMin;
         return this;
@@ -280,6 +303,11 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
 
     public AddSubUtils setOnWarnListener(OnWarnListener onWarnListener) {
         mOnWarnListener = onWarnListener;
+        return this;
+    }
+
+    public AddSubUtils setOnChangeValueListener(OnChangeValueListener onChangeValueListener) {
+        mOnChangeValueListener = onChangeValueListener;
         return this;
     }
     public int getStep() {
@@ -319,5 +347,10 @@ public class AddSubUtils extends LinearLayout implements View.OnClickListener, T
         void onWarningForBuyMax(int max);
 
         void onWarningForBuyMin(int min);
+    }
+
+    public interface OnChangeValueListener {
+
+        void onChangeValue(int value,int position);
     }
 }

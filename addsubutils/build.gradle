@@ -9,7 +9,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 25
         versionCode 1
-        versionName "1.0"
+        versionName "1.0.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
 
     }
@@ -30,12 +30,14 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
+
 //添加
 publish {
     userOrg = 'mendeveloper'//bintray.com用户名
-    groupId = 'com.mendeveloper'//jcenter上的路径
-    artifactId = 'addsubutils'//项目名称
-    publishVersion = '1.0.0'//版本号
+    repoName = 'maven'//远程仓库名字,不指明，默认是上传到maven
+    groupId = 'com.mengfei'//jcenter上的路径
+    artifactId = 'AddSubUtils'//项目名称
+    publishVersion = '1.0.0'//版本号111
     desc = 'A simple package for the addition and subtraction of the shopping cart,' +
             ' a few lines of code to get, the use of chain calls, ' +
             'and style support for custom'//描述，不重要

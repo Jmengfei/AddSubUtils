@@ -43,5 +43,15 @@
         jmf:leftResources="@drawable/minus"
         jmf:rightResources="@drawable/plus"/>
 
+    <Button
+        android:id="@+id/btn_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击进入RecyclerView"/>
+    <Button
+        android:id="@+id/btn_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击进入ListView"/>
 
 </LinearLayout>

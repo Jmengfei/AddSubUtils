@@ -1,5 +1,7 @@
 # Android商城购物车加减控件AddSubUtils
 
+对购物车加减按钮控件的简单封装，几行代码就搞定，采用链式调用，而且样式支持自定义，并且在ListView中和RecyclerView中同样适用.如果你还在为此烦恼，不妨试一下这个加减控件。如果觉得有用，欢迎star.
+
 # 相关博客
 
 [商城购物车加减控件的简单封装](http://blog.csdn.net/sinat_36668731/article/details/77163019)

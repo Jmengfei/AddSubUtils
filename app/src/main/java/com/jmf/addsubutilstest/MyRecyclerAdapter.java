@@ -26,7 +26,7 @@ import static com.jmf.addsubutilstest.R.id.recycler_iv_item;
  */
 
 public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
-    private  List<AddSubBean> mList;
+    private List<AddSubBean> mList;
     private Context mContext ;
     private LayoutInflater inflater;
     public MyRecyclerAdapter(Context context, List<AddSubBean> mList) {
@@ -66,7 +66,8 @@ public class MyRecyclerAdapter extends RecyclerView.Adapter<RecyclerView.ViewHol
             tv_item.setText(mList.get(position).getName());
             Glide.with(mContext).load(mList.get(position).getImageId()).into(iv_item);
             list_item_utils.setStep(2)
-//                    .setPosition(position)
+                    .setPosition(position)
+                    .setCurrentNumber(mList.get(position).getValue())
                     .setBuyMax(50)
                     .setInventory(36)
                     .setOnWarnListener(new AddSubUtils.OnWarnListener() {

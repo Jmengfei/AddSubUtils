@@ -11,7 +11,7 @@
 
 # 实例效果
 
-![addsubutils_all.gif](http://upload-images.jianshu.io/upload_images/4894696-1d42719651921d20.gif?imageMogr2/auto-orient/strip)
+![addsubutils_all.gif]((http://github.com/Jmengfei/AddSubUtils/raw/master/image/addsubutils_all.gif)
 
 # 联系方式：
 

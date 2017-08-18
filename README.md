@@ -54,7 +54,7 @@ dependencies {
 ### 2. 在xml代码中引用
 
 ```
-    <com.mengfei.AddSubUtils
+    <com.jmf.addsubutils.AddSubUtils
         android:id="@+id/add_sub"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content" />
@@ -62,7 +62,7 @@ dependencies {
 你也可以自定义样式：
 
 ```
- <com.mengfei.AddSubUtils
+ <com.jmf.addsubutils.AddSubUtils
         android:id="@+id/add_sub_2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
